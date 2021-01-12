@@ -10,7 +10,7 @@ namespace TI.Models
         public DateTime StartDate { get; set; }
         public string StartPlace { get; set; }
         public string FinishPlace { get; set; }
-        public float Distance { get; set; }
+        public decimal Distance { get; set; }
         public int Days { get; set; }
         public virtual ICollection<History> History { get; set; }
         public virtual ICollection<Photo> Photos  { get; set; }

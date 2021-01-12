@@ -1,0 +1,19 @@
+@model ShowPhotosViewModel
+
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Galeria</h1>
+
+<hr class="mt-2 mb-5">
+
+<div class="row text-center text-lg-left">
+
+    <div class="col-lg-3 col-md-4 col-6">
+
+            @foreach (var item in Model.Photos)
+            {
+                <img src="~/Photos/@item.Name" class="img-fluid img-thumbnail" asp-append-version="true" />  
+            }
+    
+    </div>
+    
+</div>
+<a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>

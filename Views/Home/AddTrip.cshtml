@@ -1,0 +1,55 @@
+@model AddTripViewModel
+<div class="page-content-wrapper">
+    <form enctype="multipart/form-data"  asp-action="AddTrip">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Name"></label>
+                    <input class="form-control" type="text" asp-for="Name" />
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="StartPlace"></label>
+                    <input class="form-control" type="text" asp-for="StartPlace" />
+                    <span class="text-danger" asp-validation-for="StartPlace"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="FinishPlace"></label>
+                    <input class="form-control" type="text" asp-for="FinishPlace" />
+                    <span class="text-danger" asp-validation-for="FinishPlace"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="StartDate"></label>
+                    <input class="form-control" type="date" asp-for="StartDate" />
+                    <span class="text-danger" asp-validation-for="StartDate"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Days"></label>
+                    <input class="form-control" type="number" asp-for="Days" />
+                    <span class="text-danger" asp-validation-for="Days"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Distance"></label>
+                    <input class="form-control" type="text" asp-for="Distance" />
+                    <span class="text-danger" asp-validation-for="Distance"></span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+    </form>
+
+</div>

@@ -1,0 +1,18 @@
+@model ShowVideoViewModel
+
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Wideo</h1>
+
+<hr class="mt-2 mb-5">
+
+@if (Model.Video == null)
+{
+  <p>Brak dodanego video</p>
+}
+else
+{
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="~/Video/@Model.Video" allowfullscreen></iframe>
+  </div>
+}
+<a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>
+</div>

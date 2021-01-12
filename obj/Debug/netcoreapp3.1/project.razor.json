@@ -14392,8 +14392,8 @@
   "RootNamespace": "TI",
   "Documents": [
     {
-      "FilePath": "d:\\studia\\TI\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\AddTrip.cshtml",
+      "TargetPath": "Views\\Home\\AddTrip.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14402,13 +14402,48 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\ShowHistory.cshtml",
+      "TargetPath": "Views\\Home\\ShowHistory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\studia\\TI\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\AddVideo.cshtml",
+      "TargetPath": "Views\\Home\\AddVideo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\studia\\TI\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\ShowPhotos.cshtml",
+      "TargetPath": "Views\\Home\\ShowPhotos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\AddHistory.cshtml",
+      "TargetPath": "Views\\Home\\AddHistory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\ShowVideo.cshtml",
+      "TargetPath": "Views\\Home\\ShowVideo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\ShowTrip.cshtml",
+      "TargetPath": "Views\\Home\\ShowTrip.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\studia\\TI\\Views\\Home\\AddPhotos.cshtml",
+      "TargetPath": "Views\\Home\\AddPhotos.cshtml",
       "FileKind": "mvc"
     },
     {

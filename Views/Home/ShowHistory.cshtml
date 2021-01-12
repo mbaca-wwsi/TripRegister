@@ -1,0 +1,74 @@
+@model ShowHistoryViewModel
+
+<div class="col">
+    <div class="e-tabs mb-3 px-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" asp-action="ShowTrip" asp-route-id="@Model.TripId"
+                    asp-controller="Home">Dane wycieczki</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowPhotos" asp-route-id="@Model.TripId"
+                    asp-controller="Home">Zdjęcia</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowVideo" asp-route-id="@Model.TripId"
+                    asp-controller="Home">Wideo</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowHistory" asp-route-id="@Model.TripId"
+                    asp-controller="Home">Historia</a></li>
+        </ul>
+        <div class="row flex-lg-nowrap">
+
+            <div class="col-12 col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit" asp-action="AddPhotos" asp-route-id="@Model.TripId" asp-controller="Home">Dodaj
+                                zdjęcia</a>
+                        </div>
+                        <hr class="my-3">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit"  asp-action="AddVideo"  asp-route-id="@Model.TripId">Dodaj
+                                wideo</a>
+                        </div>
+                        <hr class="my-3">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit" asp-action="AddHistory" asp-route-id="@Model.TripId" asp-controller="Home">Dodaj
+                                wpis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-3 text-center">
+                <div class="e-panel card">
+                  @if(Model.History==null)
+                  {
+                      <p>Brak wpisów</p>
+                  }
+                  else
+                  {
+                      @foreach (var item in Model.History)
+                      {
+
+                          	  <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge">
+                                    <a><i class="fa fa-circle" id=""></i></a>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4>@item.Title</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>@item.Comment</p>
+                                        </div>
+                                        <div class="timeline-footer">
+                                            <p class="text-right"> @item.Date</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                      }
+                  }
+                </div>
+            </div>
+        </div>
+         <a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>
+    </div>
+</div>

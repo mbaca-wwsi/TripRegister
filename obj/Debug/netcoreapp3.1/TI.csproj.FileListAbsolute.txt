@@ -37,7 +37,6 @@ D:\studia\TI\obj\Debug\netcoreapp3.1\TI.TagHelpers.input.cache
 D:\studia\TI\obj\Debug\netcoreapp3.1\TI.TagHelpers.output.cache
 D:\studia\TI\obj\Debug\netcoreapp3.1\TI.RazorCoreGenerate.cache
 D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -53,3 +52,11 @@ D:\studia\TI\obj\Debug\netcoreapp3.1\TI.pdb
 D:\studia\TI\obj\Debug\netcoreapp3.1\TI.genruntimeconfig.cache
 D:\studia\TI\bin\Debug\netcoreapp3.1\Npgsql.dll
 D:\studia\TI\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddTrip.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowTrip.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowHistory.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddHistory.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddPhotos.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowPhotos.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddVideo.cshtml.g.cs
+D:\studia\TI\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowVideo.cshtml.g.cs

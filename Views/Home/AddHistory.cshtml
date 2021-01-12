@@ -1,0 +1,27 @@
+@model AddHistoryViewModel
+<div class="page-content-wrapper">
+    <form enctype="multipart/form-data"  asp-action="AddHistory">
+    <input type="hidden" asp-for="@Model.TripId"/>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Title"></label>
+                    <input class="form-control" type="text" asp-for="Title" />
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Comment"></label>
+                    <textarea  class="form-control" type="text" asp-for="Comment"></textarea>
+                    <span class="text-danger" asp-validation-for="Comment"></span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+    </form>
+
+</div>
+<a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>

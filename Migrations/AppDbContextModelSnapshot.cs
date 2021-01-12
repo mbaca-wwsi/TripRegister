@@ -29,6 +29,9 @@ namespace TI.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("text");
 
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
@@ -72,8 +75,8 @@ namespace TI.Migrations
                     b.Property<int>("Days")
                         .HasColumnType("integer");
 
-                    b.Property<float>("Distance")
-                        .HasColumnType("real");
+                    b.Property<decimal>("Distance")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("FinishPlace")
                         .HasColumnType("text");

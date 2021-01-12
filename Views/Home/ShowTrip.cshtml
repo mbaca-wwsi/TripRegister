@@ -1,0 +1,98 @@
+@model ShowTripViewModel
+
+<div class="col">
+    <h1 class="text-center">@Model.Name</h1>
+    <div class="e-tabs mb-3 px-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" asp-action="ShowTrip" asp-route-id="@Model.Id"
+                    asp-controller="Home">Dane wycieczki</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowPhotos" asp-route-id="@Model.Id"
+                    asp-controller="Home">Zdjęcia</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowVideo" asp-route-id="@Model.Id"
+                    asp-controller="Home">Wideo</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="ShowHistory" asp-route-id="@Model.Id"
+                    asp-controller="Home">Historia</a></li>
+        </ul>
+        <div class="row flex-lg-nowrap">
+
+            <div class="col-12 col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit" asp-action="AddPhotos" asp-route-id="@Model.Id" asp-controller="Home">Dodaj
+                                zdjęcia</a>
+                        </div>
+                        <hr class="my-3">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit"  asp-action="AddVideo"  asp-route-id="@Model.Id">Dodaj
+                                wideo</a>
+                        </div>
+                        <hr class="my-3">
+                        <div class="text-center px-xl-3">
+                            <a class="btn btn-primary" type="submit" asp-action="AddHistory" asp-route-id="@Model.Id" asp-controller="Home">Dodaj
+                                wpis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-3 text-center">
+                <div class="e-panel card">
+                    <form enctype="multipart/form-data" asp-action="EditTrip">
+                        <div class="row">
+                            <input type="hidden" asp-for="Id" />
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="Name"></label>
+                                    <input class="form-control" type="text" asp-for="Name" />
+                                    <span class="text-danger" asp-validation-for="Name"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="StartPlace"></label>
+                                    <input class="form-control" type="text" asp-for="StartPlace" />
+                                    <span class="text-danger" asp-validation-for="StartPlace"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="FinishPlace"></label>
+                                    <input class="form-control" type="text" asp-for="FinishPlace" />
+                                    <span class="text-danger" asp-validation-for="FinishPlace"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="StartDate"></label>
+                                    <input class="form-control" type="date" asp-for="StartDate" />
+                                    <span class="text-danger" asp-validation-for="StartDate"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="Days"></label>
+                                    <input class="form-control" type="number" asp-for="Days" />
+                                    <span class="text-danger" asp-validation-for="Days"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="Distance"></label>
+                                    <input class="form-control" type="text" asp-for="Distance" />
+                                    <span class="text-danger" asp-validation-for="Distance"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Zapisz</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-success" asp-action="Index">Powrót</a>
+</div>

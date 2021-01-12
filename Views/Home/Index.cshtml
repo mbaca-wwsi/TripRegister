@@ -1,8 +1,49 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div class="form-group">
+    <form asp-action="Index" method="get">
+        Szukaj według nazwy lub miejsca : <input type="text" name="search" value="@ViewData["Search"]" />
+        <input type="submit" value="Szukaj" class="btn btn-success" />
+        <a asp-action="Index" class="btn btn-primary">Powrót do pełnej listy</a>
+    </form>
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="container-fluid">
+    <a asp-action="AddTrip" class="btn btn-success">Dodaj wycieczkę</a>
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["Date"]">Data
+                                Wycieczki</a>
+                        </th>
+                        <th scope="col">Nazwa</th>
+                        <th scope="col">Miejsce startu</th>
+                        <th scope="col">Miejsce zakończenia</th>
+                        <th scope="col">Dystans</th>
+                        <th scope="col">Ilość dni</th>
+                        <th scope="col">Pokaż</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var z in Model)
+                    {
+                        <tr>
+                            <td>@Convert.ToDateTime(z.StartDate).ToString("dd/MM/yyyy")</td>
+                            <td>@z.Name</td>
+                            <td>@z.StartPlace</td>
+                            <td>@z.FinishPlace</td>
+                            <td>@z.Distance</td>
+                            <td>@z.Days</td>
+                            <td>
+                                <a class="btn btn-primary" asp-controller="Home" asp-action="ShowTrip"
+                                    asp-route-id="@z.Id">Pokaż</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

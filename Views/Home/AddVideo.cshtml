@@ -1,0 +1,34 @@
+@model AddVideoViewModel
+<div class="page-content-wrapper">
+    <form enctype="multipart/form-data" asp-action="AddVideo">
+        <input type="hidden" asp-for="@Model.TripId" />
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Video"></label>
+                    <div class="custom-file">
+                        <input asp-for="Video" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Dodaj video)</label>
+                    </div>
+                    <span class="text-danger">@Model.Error</span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="send">Zapisz</button>
+    </form>
+
+</div>
+<a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>
+
+@section Scripts {
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+            $('.custom-file-input').on("change",function(){
+                var label = $(this).next('.custom-file-label');
+                var files = $(this)[0].files;
+                label.html(files[0].name);
+            });
+        });
+    </script>
+}

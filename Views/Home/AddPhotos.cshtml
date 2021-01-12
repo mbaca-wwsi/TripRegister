@@ -1,0 +1,47 @@
+@model AddPhotosViewModel
+<div class="page-content-wrapper">
+    <form enctype="multipart/form-data" asp-action="AddPhotos">
+        <input type="hidden" asp-for="@Model.TripId" />
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Photos"></label>
+                    <div class="custom-file">
+                        <input asp-for="Photos" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Wybierz pliki (max 6)</label>
+                    </div>
+                    <span class="text-danger">@Model.Error</span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="send">Zapisz</button>
+    </form>
+
+</div>
+<a class="btn btn-success" asp-action="ShowTrip" asp-route-id="@Model.TripId">Powrót</a>
+@section Scripts {
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+            $('.custom-file-input').on("change",function(){
+                var label = $(this).next('.custom-file-label');
+                var files = $(this)[0].files;
+                if(files.length>1 & files.length<=6){
+                    label.html('Ilość dodanych plików : ' + files.length );
+                    document.getElementById("send").style.display = "inline";
+                }
+                else if (files.length==1)
+                {
+                    label.html(files[0].name);
+                    document.getElementById("send").style.display = "inline";
+                }
+                else if(files.length>6)
+                {
+                    label.html('Możesz maksymalnie dodać 6 plików!' );
+                    document.getElementById("send").style.display = "none";
+                    
+                }
+            });
+        });
+    </script>
+}
